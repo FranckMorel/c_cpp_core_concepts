@@ -37,7 +37,7 @@ CPP_Core_Concepts/
 └── README.md
 
 ```
-#Author
+Author
 
 Morel Tonfack
 
