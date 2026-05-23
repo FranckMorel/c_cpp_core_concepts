@@ -35,3 +35,11 @@ CPP_Core_Concepts/
 ├── Embedded_Concepts/
 │
 └── README.md
+
+```
+#Author
+
+Morel Tonfack
+
+GitHub:
+https://github.com/FranckMorel
