@@ -33,7 +33,7 @@ int main(void)
      */
     int (*ptr)[3] = matrix;
 
-    printf("Address of 1st row: %p\n", (void *)matrix); // or (void*)&matrix
+    printf("Address of 1st row: %p\n", (void *)matrix);    // or (void*)&matrix
     printf("Address of 2nd row: %p\n", (void *)matrix[1]); // or (void*)&matrix[1]
 
     /*
@@ -85,3 +85,21 @@ int main(void)
 
     return 0;
 }
+
+/* Extra Notes
+matrix == &matrix[0] -> Address of 1st row
+*matrix == &matrix[0][0]  -> Address of 1st Element , 1st row
+*(*matrix) == matrix[0][0] -> 1st Element , 1st row
+
+for int (*ptr)[3] = matrix
+ptr == matrix = &matrix[0] -> Adress of 1st row
+*ptr == *matrix = &matrix[0][0] -> Adress of 1st Element, 1st row
+*(*ptr) == *(*matrix) == matrix[0][0] -> 1st Element , 1st row
+
+!!!! When using ptr you must make sure this form *(ptr)[3] ist respected
+    *(ptr+i)[j] is not equals to (*(ptr + i))[j]
+
+    correct form:
+    (*(ptr + i))[j] or *(*(ptr + i) + j)
+
+*/
