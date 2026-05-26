@@ -25,11 +25,21 @@ CPP_Core_Concepts/
 │   ├── pointer_arithmetic.cpp
 │   ├── pointer_to_pointer.cpp
 │   ├── call_by_reference.cpp
-│   ├── multidimensional_arrays.cpp
-│   └── README.md
-│
+│   ├── function_pointers_as_callbacks.cpp
+│   └── function_pointers.cpp
+│ 
 ├── Arrays_and_Strings/
+│   ├── array_basics.cpp
+│   ├── array_as_function_arguments.cpp
+│   ├── character_arrays.cpp
+│   ├── multidimensional_arrays.cpp
+│   ├── string_functions.cpp
+│   └── string_and_pointers.cpp
+│
 ├── Memory_Management/
+│   ├── dynamic_memory_allocationTeil1.cpp
+│   └── dynamic_memory_allocationTeil2.cpp.cpp
+│
 ├── Bitwise_Operations/
 ├── Low_Level_Data_Manipulation/
 ├── Embedded_Concepts/
