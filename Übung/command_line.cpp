@@ -3,62 +3,131 @@
 #include <string.h>
 
 char eingabe_buffer[10];
-const char *actualStatus;
+int unknownCounter = 0;
+int helpShown = 0;
+int running = 1;
+const char *actualStatus = "ok";
 const char *systemStatus[] = {"ok","warning","error","unknown"};
-const char *commands[3] = {"status",
-                            "clear",
-                            "exit"  };
 
-void showCommands(){
-    for (int i; i < sizeof(commands); i++)
+void handle_help(void);
+void handleStatus(void);
+void handleClear(void);
+void handleExit(void);
+void handleUnknown(void);
+void handleReset(void);
+
+struct commandStruct{
+    const char *name;
+    void (*handler)(void);
+};
+
+const struct commandStruct commandList[] = {{"help", handle_help},
+                                            {"status", handleStatus},
+                                            {"clear", handleClear},
+                                            {"exit", handleExit},
+                                            {"reset", handleReset}};
+
+
+void read_command()
+{
+    scanf("%9s", eingabe_buffer);
+}
+
+void showCommands()
+{
+    int size = sizeof(commandList) / sizeof(commandList[0]);
+    for (int i = 1; i < size; i++)
     {
-        printf("%s\n", commands[i]);
+        printf("%s\n", commandList[i].name);
     }
 }
 
-void statusCommand(char *cmd){
+void clearCommand(char *cmd)
+{
 
-    if(strcmp(eingabe_buffer, "status") == 0){
-        printf("Status: %s", actualStatus);
-    }
+    eingabe_buffer[0] = '\0';
 }
 
-void clearCommand(char *cmd){
-
-    if (strcmp(eingabe_buffer, "clear") == 0)
+/*int caracterCount(char *cmd)
+{
+    int count = 0;
+    while (*cmd != '\0')
     {
-        eingabe_buffer[0] = '\0';
-    }
-}
-
-int caracterCount(char* cmd){
-    int count=0;
-    while(*cmd != '\0'){
         cmd++;
         count++;
     }
     return count;
+} */
+
+
+void handle_help(){
+    showCommands();
+    helpShown = 1;
 }
+
+void handleStatus()
+{
+    printf("Status: %s\n", actualStatus);
+}
+
+void handleClear()
+{
+    clearCommand(eingabe_buffer);
+}
+
+void handleExit()
+{
+    running = 0;
+}
+
+void handleReset(){
+    actualStatus = systemStatus[0];
+    unknownCounter = 0;
+    helpShown = 0;
+}
+
+void handleUnknown()
+{
+    if (unknownCounter >=  3)
+    {
+        actualStatus = systemStatus[0];
+        printf("Too many invalid commands. System error.\n");
+    }
+    else
+    {
+        actualStatus = systemStatus[3];
+        printf("Unknown Command\n");
+        unknownCounter++;
+    }
+}
+
+
 
 int main(){
-
-    printf("Enter Command: ");
-    scanf("%10s", eingabe_buffer);
-    int numofCaracters = caracterCount(eingabe_buffer);
-
-    if (strcmp(eingabe_buffer, "help") == 0)
+    while (running)
     {
-        showCommands();
+        printf("Enter command: ");
+        read_command();
+        int size = sizeof(commandList) / sizeof(commandList[0]);
+        int found = 0;
+        for (int i = 0; i < size; i++)
+        {
+            if (strcmp(eingabe_buffer, commandList[i].name) == 0)
+            {
+                commandList[i].handler();
+                found = 1;
+                break;
+            }
+        }
+        if (!found)
+            if(helpShown == 0){
+                printf("Please enter 'help' to see the list of available commands.\n");
+            }else{
+                handleUnknown();
+            }
     }
-    else if (numofCaracters > sizeof(eingabe_buffer) || eingabe_buffer[0] == '\0')
-    {
-        actualStatus = systemStatus[2];
-        printf("Error");
-    }
+    return 0;
+
+
+
 }
-
-/*else
-{
-    actualStatus = systemStatus[3];
-    printf("Unknown Command");
-}*/
