@@ -9,7 +9,7 @@ This repository covers the following main topics:
 - Memory Management
 - Bitwise Operations
 - Low-Level Data Manipulation
-- Embedded Concepts
+- Data structures for embedded systems 
 
 More topics will be added progressively.
 
@@ -37,12 +37,18 @@ CPP_Core_Concepts/
 │   └── string_and_pointers.cpp
 │
 ├── Memory_Management/
-│   ├── dynamic_memory_allocationTeil1.cpp
-│   └── dynamic_memory_allocationTeil2.cpp.cpp
+│   ├── stack_vs_heap.cpp        
+│   ├── malloc_basics.cpp        
+│   ├── calloc_vs_malloc.cpp     
+│   ├── realloc_example.cpp      
+│   ├── memory_leak.cpp          
+│   ├── dangling_pointer.cpp
+│   ├── double_free.cpp
+│   └── heap_fragmentation.cpp
 │
 ├── Bitwise_Operations/
 ├── Low_Level_Data_Manipulation/
-├── Embedded_Concepts/
+├── Data Structures/
 │
 ├── Übung/
 │   ├── command_line.cpp
