@@ -61,5 +61,5 @@ Author
 
 Morel Tonfack
 
-GitHub:
-https://github.com/FranckMorel
+LinkedIn:
+[linkedin.com/in/morel-tonfack98/]
