@@ -9,7 +9,7 @@ int running = 1;
 const char *actualStatus = "ok";
 const char *systemStatus[] = {"ok","warning","error","unknown"};
 
-void handle_help(void);
+void handleHelp(void);
 void handleStatus(void);
 void handleClear(void);
 void handleExit(void);
@@ -21,14 +21,14 @@ struct commandStruct{
     void (*handler)(void);
 };
 
-const struct commandStruct commandList[] = {{"help", handle_help},
+const struct commandStruct commandList[] = {{"help", handleHelp},
                                             {"status", handleStatus},
                                             {"clear", handleClear},
                                             {"exit", handleExit},
                                             {"reset", handleReset}};
 
 
-void read_command()
+void readCommand()
 {
     scanf("%9s", eingabe_buffer);
 }
@@ -60,7 +60,7 @@ void clearCommand(char *cmd)
 } */
 
 
-void handle_help(){
+void handleHelp(){
     showCommands();
     helpShown = 1;
 }
@@ -107,7 +107,7 @@ int main(){
     while (running)
     {
         printf("Enter command: ");
-        read_command();
+        readCommand();
         int size = sizeof(commandList) / sizeof(commandList[0]);
         int found = 0;
         for (int i = 0; i < size; i++)
