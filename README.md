@@ -62,4 +62,4 @@ Author
 Morel Tonfack
 
 LinkedIn:
-[linkedin.com/in/morel-tonfack98/]
+linkedin.com/in/morel-tonfack98/
