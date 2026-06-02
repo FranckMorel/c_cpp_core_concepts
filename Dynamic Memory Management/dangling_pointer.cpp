@@ -10,6 +10,10 @@
  * Embedded relevance:
  * Dangling pointers can cause random crashes, corrupted data,
  * hard-to-debug firmware faults and unpredictable system behavior.
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed explanations
+ * of all operations shown in this example.
  */
 
 #include <stdio.h>

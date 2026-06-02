@@ -12,6 +12,10 @@
  * - corrupted data
  * - unpredictable firmware behavior
  * - hard-to-debug runtime faults
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed explanations
+ * of all operations shown in this example.
  */
 
 #include <stdio.h>

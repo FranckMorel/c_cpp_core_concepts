@@ -9,6 +9,11 @@
  * Embedded relevance:
  * Heap fragmentation can eventually prevent large allocations
  * even when enough total free memory still exists.
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed
+ * memory diagrams and explanations of all
+ * operations shown in this example.
  */
 
 #include <stdio.h>

@@ -12,6 +12,11 @@
  * - firmware often runs for long periods
  * - leaked memory is not recovered until reset
  * - repeated leaks can eventually crash the system
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed
+ * memory diagrams and explanations of all
+ * operations shown in this example.
  */
 
 #include <stdio.h>

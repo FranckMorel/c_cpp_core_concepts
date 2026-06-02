@@ -16,6 +16,10 @@
  *
  * In many embedded systems dynamic allocation is avoided
  * because memory usage becomes harder to predict.
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed explanations
+ * of all operations shown in this example.
  */
 
 #include <stdio.h>
@@ -111,7 +115,7 @@ int main(void)
  * -> allocates size bytes on the heap
  *
  * malloc(n * sizeof(type))
- * -> allocates memory for n elements
+ * -> allocates memory for n elements of type type
  *
  * malloc() returns:
  * -> valid address on success

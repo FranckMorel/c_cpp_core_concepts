@@ -16,6 +16,10 @@
  *
  * In many embedded systems realloc() is avoided because
  * memory usage and execution time become less predictable.
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed explanations
+ * of all operations shown in this example.
  */
 
 #include <stdio.h>

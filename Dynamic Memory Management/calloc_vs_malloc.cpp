@@ -12,6 +12,10 @@
  * - uninitialized memory can cause bugs
  * - protocol buffers often require zero initialization
  * - deterministic startup behavior is important
+ *
+ * NOTE:
+ * The Extra Notes section contains detailed explanations
+ * of all operations shown in this example.
  */
 
 #include <stdio.h>
