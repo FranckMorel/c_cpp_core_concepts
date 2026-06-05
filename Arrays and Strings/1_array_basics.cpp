@@ -36,6 +36,13 @@ int main(void)
         printf("Address of values[%d]: %p\n", i, (void *)&values[i]);
     }
 
+
+    printf("Array elements:\n");
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("values[%d] = %d\n", i, values[i]);
+    }
     /*
      * Array indexing and pointer arithmetic are equivalent:
      *
