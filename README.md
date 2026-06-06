@@ -6,10 +6,12 @@ This repository covers the following main topics:
 
 - Pointers
 - Arrays and Strings
-- Memory Management
+- Dynamic Memory Management
+- Data structures for embedded systems
+- Algorithms
+- File handling
 - Bitwise Operations
 - Low-Level Data Manipulation
-- Data structures for embedded systems 
 
 More topics will be added progressively.
 
@@ -34,7 +36,10 @@ CPP_Core_Concepts/
 │   ├── character_arrays.cpp
 │   ├── multidimensional_arrays.cpp
 │   ├── string_functions.cpp
-│   └── string_and_pointers.cpp
+│   ├── string_and_pointers.cpp
+│   └── Übung/
+│             ├── command_line.cpp
+│             └── user_loginSystem.cpp
 │
 ├── Memory_Management/
 │   ├── stack_vs_heap.cpp        
@@ -46,13 +51,21 @@ CPP_Core_Concepts/
 │   ├── double_free.cpp
 │   └── heap_fragmentation.cpp
 │
+├── Data Structures/
+│   ├── data_structure_introduction.cpp
+│   ├── arrays_vs_linked_lists.cpp
+│   ├── linkedLists_functions.cpp
+│   ├── stack_using_array.cpp
+│   ├── stack_using_linked_list.cpp
+│   ├── queue_using_array.cpp
+│   ├── queue_using_linked_list.cpp
+│   ├── circular_buffer.cpp
+│   └── doubly_linked_list.cpp
+│
+├── Algorithms/
 ├── Bitwise_Operations/
 ├── Low_Level_Data_Manipulation/
-├── Data Structures/
 │
-├── Übung/
-│   ├── command_line.cpp
-│   └── user_loginSystem.cpp
 │
 └── README.md
 
