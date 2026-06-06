@@ -11,6 +11,11 @@
  * Arrays are predictable and cache-friendly.
  * Linked lists are flexible, but require pointer handling,
  * dynamic allocation and careful memory management.
+ *
+ * * NOTE:
+ * The Extra Notes section contains detailed
+ * memory diagrams and explanations of all
+ * operations shown in this example.
  */
 
 #include <stdio.h>
