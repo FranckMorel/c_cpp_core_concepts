@@ -54,13 +54,13 @@ CPP_Core_Concepts/
 ├── Data Structures/
 │   ├── data_structure_introduction.cpp
 │   ├── arrays_vs_linked_lists.cpp
-│   ├── linkedLists_functions.cpp
+│   ├── singly_linkedLists_operations.cpp
+│   ├── doubly_linkedLists_operations.cpp
 │   ├── stack_using_array.cpp
 │   ├── stack_using_linked_list.cpp
 │   ├── queue_using_array.cpp
 │   ├── queue_using_linked_list.cpp
-│   ├── circular_buffer.cpp
-│   └── doubly_linked_list.cpp
+│   └── circular_buffer.cpp
 │
 ├── Algorithms/
 ├── Bitwise_Operations/
