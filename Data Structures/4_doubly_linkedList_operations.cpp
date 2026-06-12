@@ -39,7 +39,7 @@ int insertAt_nPosition(struct Node** head, int value, int pos){
     if(pos == 0){
         newNode->next = *head;
         newNode->prev = NULL;
-        if(*head != NULL){ // falls head auf eine leere List zeigt sonst wird das Programm z.B *head->prev crashen
+        if(*head != NULL){ // falls head auf eine leere List zeigt sonst wird das Programm z.B (*head)->prev crashen
             (*head)->prev = newNode;
         }
 
@@ -67,8 +67,45 @@ int insertAt_nPosition(struct Node** head, int value, int pos){
     return 1;
 }
 
-void printList(struct Node *head)
-{
+void reverseList(struct Node** head){
+
+    struct Node *currentNode = *head;
+    struct Node *temp = NULL;
+
+    while (currentNode != NULL){
+        temp = currentNode->prev;
+
+        currentNode->prev = currentNode->next;
+        currentNode->next = temp;
+
+        currentNode = currentNode->prev;
+    }
+
+    if (temp != NULL)
+    {
+        *head = temp->prev;
+    }
+}
+
+void printReverse(struct Node *head){
+
+    struct Node *currentNode = head;
+
+    while (currentNode->next != NULL)
+    {
+        currentNode = currentNode->next;
+    }
+
+    while (currentNode != NULL)
+    {
+        printf("%d ", currentNode->data);
+        currentNode = currentNode->prev;
+    }
+
+    printf("\n");
+}
+
+void printList(struct Node *head){
     while (head != NULL)
     {
         printf("%d ", head->data);
@@ -89,10 +126,10 @@ int main(){
     }
 
     printList(head);
+    printReverse(head);
+    reverseList(&head);
+    printList(head);
 
-    //if(insertAt_nPosition(&head, -1, 3))
-      //  printList(head);
-
-    int length = listLength(head);
-    printf("%d", length);
+    if (insertAt_nPosition(&head, 99, 8)) // Einfügen in eine ungueltige Position
+        printList(head);
 }
