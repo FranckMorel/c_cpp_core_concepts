@@ -70,21 +70,72 @@ int insertAt_nPosition(struct Node** head, int value, int pos){
 void reverseList(struct Node** head){
 
     struct Node *currentNode = *head;
+    struct Node *newHead = NULL;
     struct Node *temp = NULL;
+
+    if(*head == NULL){ // Schutz gegen leere Liste
+        return;
+    }
 
     while (currentNode != NULL){
         temp = currentNode->prev;
 
         currentNode->prev = currentNode->next;
         currentNode->next = temp;
+        newHead = currentNode; // um den neuen Head zu merken, der neue Head ist jetzt der Node der den letzen Node war
 
         currentNode = currentNode->prev;
     }
 
-    if (temp != NULL)
+    *head = newHead;
+}
+
+
+void deleteNode(struct Node **head, struct Node* NodetoDelete)
+{
+
+    if (*head == NULL || NodetoDelete == NULL)
     {
-        *head = temp->prev;
+        return;
     }
+
+    if (NodetoDelete->prev == NULL){
+        *head = NodetoDelete->next;
+
+        if (*head != NULL){
+        (*head)->prev = NULL;
+    }
+        free(NodetoDelete);
+        return;
+    }
+    if (NodetoDelete->next == NULL){
+        NodetoDelete->prev->next = NULL;
+
+        free(NodetoDelete);
+        return;
+    }
+
+    NodetoDelete->next->prev = NodetoDelete->prev;
+    NodetoDelete->prev->next = NodetoDelete->next;
+    free(NodetoDelete);
+}
+
+
+Node *findNode(struct Node *head, int value)
+{
+    struct Node *nodetoFind = head;
+
+    while (nodetoFind != NULL)
+    {
+        if (nodetoFind->data == value)
+        {
+            return nodetoFind;
+        }
+
+        nodetoFind = nodetoFind->next;
+    }
+
+    return NULL;
 }
 
 void printReverse(struct Node *head){
@@ -126,8 +177,15 @@ int main(){
     }
 
     printList(head);
+
     printReverse(head);
+
     reverseList(&head);
+    printList(head);
+
+    struct Node* nodetoDelete = findNode(head, 15);
+    deleteNode(&head, nodetoDelete);
+
     printList(head);
 
     if (insertAt_nPosition(&head, 99, 8)) // Einfügen in eine ungueltige Position

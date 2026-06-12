@@ -1,5 +1,5 @@
 /*
- * Topic: Singly Linked List Functions
+ * Topic: Singly Linked List Operations
  *
  * This example demonstrates:
  * - insert at head
