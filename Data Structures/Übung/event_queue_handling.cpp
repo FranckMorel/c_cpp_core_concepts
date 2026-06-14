@@ -12,12 +12,18 @@ struct Node
 
 Node* creatEvent(int eventId, int priority, int timestamp){
     struct Node* newEvent = (struct Node *)malloc(sizeof(struct Node));
+    if (newEvent == NULL)
+    {
+        return NULL;
+    }
 
     newEvent->eventId = eventId;
     newEvent->priority = priority;
     newEvent->timestamp = timestamp;
 
     newEvent->next = NULL;
+
+    return newEvent;
 }
 
 void addEvent(struct Node** head, struct Node* event){
@@ -111,11 +117,11 @@ void processNextEvent(struct Node **head)
 }
 
 
-void printList(struct Node* head)
+void printEventList(struct Node* head)
 {
         while (head != NULL)
         {
-            printf("%d,%d,%d ", head->eventId, head->priority, head->timestamp);
+            printf("%d, %d, %d \n", head->eventId, head->priority, head->timestamp);
             head = head->next;
         }
 
@@ -126,18 +132,16 @@ void printList(struct Node* head)
 int main()
 {
         struct Node* head = NULL;
-        struct Node* event1 = (struct Node*)malloc(sizeof(struct Node));
-        if (event1 == NULL)
-        {
-            return 1;
-        }
+        struct Node *event1 = creatEvent(3851, 5, 100);
+        struct Node *event2 = creatEvent(3862, 2, 101);
+        struct Node *event3 = creatEvent(3932, 4, 105);
+        struct Node *event4 = creatEvent(3294, 3, 107);
 
-        event1->eventId = 1;
-        event1->priority = 5;
-        event1->timestamp = 100;
-        event1->next = NULL;
+        addEventbyPriority(&head, event1);
+        addEventbyPriority(&head, event2);
+        addEventbyPriority(&head, event3);
+        addEventbyPriority(&head, event4);
 
-        addEvent(&head, event1);
-        printList(head);
-        printList(findEvent(head, event1->eventId));
+        printEventList(head);
+        // printList(findEvent(head, event1->eventId));
 }
