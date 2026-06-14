@@ -166,7 +166,7 @@ int deleteNode(struct Node **head, int pos)
  * - pointer to the node if found
  * - NULL if not found
  */
-struct Node *findNode(struct Node *head, int value)
+struct Node* findNode(struct Node *head, int value)
 {
     struct Node *currentNode = head;
 
@@ -188,9 +188,9 @@ struct Node *findNode(struct Node *head, int value)
  */
 void reverseList(struct Node **head)
 {
-    struct Node *previousNode = NULL;
-    struct Node *currentNode = *head;
-    struct Node *nextNode = NULL;
+    struct Node* previousNode = NULL;
+    struct Node* currentNode = *head;
+    struct Node* nextNode = NULL;
 
     while (currentNode != NULL)
     {
@@ -208,7 +208,7 @@ void reverseList(struct Node **head)
  *
  * This function does not modify the original head.
  */
-void printList(struct Node *head)
+void printList(struct Node* head)
 {
     while (head != NULL)
     {
@@ -222,13 +222,13 @@ void printList(struct Node *head)
 /*
  * Free the complete list.
  */
-void freeList(struct Node **head)
+void freeList(struct Node** head)
 {
-    struct Node *currentNode = *head;
+    struct Node* currentNode = *head;
 
     while (currentNode != NULL)
     {
-        struct Node *nextNode = currentNode->next;
+        struct Node* nextNode = currentNode->next;
         free(currentNode);
         currentNode = nextNode;
     }
@@ -238,7 +238,7 @@ void freeList(struct Node **head)
 
 int main(void)
 {
-    struct Node *head = NULL;
+    struct Node* head = NULL;
 
     for (int i = 1; i < 6; i++)
     {
