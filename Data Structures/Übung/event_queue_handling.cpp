@@ -10,6 +10,16 @@ struct Node
     struct Node* next;
 };
 
+Node* creatEvent(int eventId, int priority, int timestamp){
+    struct Node* newEvent = (struct Node *)malloc(sizeof(struct Node));
+
+    newEvent->eventId = eventId;
+    newEvent->priority = priority;
+    newEvent->timestamp = timestamp;
+
+    newEvent->next = NULL;
+}
+
 void addEvent(struct Node** head, struct Node* event){
     struct Node* currentNode = *head;
     event->next = NULL;
