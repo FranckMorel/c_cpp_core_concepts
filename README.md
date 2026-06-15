@@ -1,4 +1,4 @@
-# CPP Core Concepts
+# C_CPP Core Concepts
 
 The goal of this repository is to build a strong understanding of memory behavior, data representation and low-level software concepts commonly used in embedded systems and firmware development.
 
