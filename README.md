@@ -38,8 +38,8 @@ CPP_Core_Concepts/
 │   ├── string_functions.cpp
 │   ├── string_and_pointers.cpp
 │   └── Übung/
-│             ├── command_line.cpp
-│             └── user_loginSystem.cpp
+│            ├── command_line.cpp
+│            └── user_loginSystem.cpp
 │
 ├── Memory_Management/
 │   ├── stack_vs_heap.cpp        
@@ -61,6 +61,8 @@ CPP_Core_Concepts/
 │   ├── queue_using_array.cpp
 │   ├── queue_using_linked_list.cpp
 │   └── circular_buffer.cpp
+│   └── Übung/
+│            └── event_queue_handling.cpp
 │
 ├── Algorithms/
 ├── Bitwise_Operations/
