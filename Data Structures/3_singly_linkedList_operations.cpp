@@ -12,11 +12,8 @@
  * - safe dynamic memory handling
  *
  * NOTE:
- * See Extra Notes at the bottom for:
- * - pointer diagrams
- * - memory diagrams
- * - head pointer explanation
- * - insert/delete/reverse walkthroughs
+ * See Extra Notes at the bottom for detailled explanation
+ * for each function using memory diagrams
  */
 
 #include <stdio.h>
