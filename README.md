@@ -37,36 +37,36 @@ CPP_Core_Concepts/
 ├── 3_Data_Structures/
 │     ├── Introduction
 │     ├── C Implementations
-│         ├── Linked Lists
-│         ├── Stack
-│         ├── Queue
-│         ├── Circular Buffer
-│ 
+│     │   ├── Linked Lists
+│     │   ├── Stack
+│     │   ├── Queue
+│     │   └── Circular Buffer
+│     │
 │     ├── C++ Implementations
-│         ├── Stack Class
-│         ├── Queue Class
-│         ├── Circular Buffer Class
-│         └── Stack Class using Templates 
+│     │    ├── Stack Class
+│     │    ├── Queue Class
+│     │    ├── Circular Buffer Class
+│     │    └── Stack Class using Templates 
 │     │
 │     └── Exercises
 │
 ├── 4_Algorithms/
 │   ├── Searching
-│       ├── Linear Search
-│       └── Binary Search
-│ 
+│   │   ├── Linear Search
+│   │   └── Binary Search
+│   │
 │   ├── Sorting
-│       ├── Bubble Sort
-│       ├── Selection Sort
-│       ├── Insertion Sort
-│       ├── Merge Sort
-│       └── Quick Sort
-│ 
+│   │   ├── Bubble Sort
+│   │   ├── Selection Sort
+│   │   ├── Insertion Sort
+│   │   ├── Merge Sort
+│   │   └── Quick Sort
+│   │
 │   ├── Recursion
-│       ├── Factorial
-│       ├── Fibonacci
-│       └── Recursive Traversal
-│ 
+│   │   ├── Factorial
+│   │   ├── Fibonacci
+│   │   └── Recursive Traversal
+│   │
 │   └── Embedded Algorithms
 │       ├── Debounce Algorithm
 │       ├── Edge Detection
