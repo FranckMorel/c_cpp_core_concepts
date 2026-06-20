@@ -61,6 +61,8 @@ CPP_Core_Concepts/
 │   ├── queue_using_array.cpp
 │   ├── queue_using_linked_list.cpp
 │   └── circular_buffer.cpp
+│   └── cpp_Implementations/
+│                           └──Stack
 │   └── Übung/
 │            └── event_queue_handling.cpp
 │
