@@ -43,27 +43,27 @@ CPP_Core_Concepts/
 │     └── Exercises
 │
 ├── 4_Algorithms/
-│   ├── Searching
-│   │   ├── Linear Search
-│   │   └── Binary Search
-│   │
-│   ├── Sorting
-│   │   ├── Bubble Sort
-│   │   ├── Selection Sort
-│   │   ├── Insertion Sort
-│   │   ├── Merge Sort
-│   │   └── Quick Sort
-│   │
-│   ├── Recursion
-│   │   ├── Factorial
-│   │   ├── Fibonacci
-│   │   └── Recursive Traversal
-│   │
-│   └── Embedded Algorithms
-│       ├── Debounce Algorithm
-│       ├── Edge Detection
-│       ├── Hysteresis Filter
-│       └── Moving Average Filter
+│    ├── Searching
+│    │   ├── Linear Search
+│    │   └── Binary Search
+│    │
+│    ├── Sorting
+│    │   ├── Bubble Sort
+│    │   ├── Selection Sort
+│    │   ├── Insertion Sort
+│    │   ├── Merge Sort
+│    │   └── Quick Sort
+│    │
+│    ├── Recursion
+│    │   ├── Factorial
+│    │   ├── Fibonacci
+│    │   └── Recursive Traversal
+│    │
+│    └── Embedded Algorithms
+│        ├── Debounce Algorithm
+│        ├── Edge Detection
+│        ├── Hysteresis Filter
+│        └── Moving Average Filter
 │ 
 ├── 5_Low_Level_Programming/
 ├── 6_Build_System
