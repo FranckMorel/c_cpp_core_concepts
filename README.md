@@ -41,7 +41,7 @@ CPP_Core_Concepts/
 │            ├── command_line.cpp
 │            └── user_loginSystem.cpp
 │
-├── Memory_Management/
+├── Dynamic_Memory_Management/
 │   ├── stack_vs_heap.cpp        
 │   ├── malloc_basics.cpp        
 │   ├── calloc_vs_malloc.cpp     
@@ -51,7 +51,7 @@ CPP_Core_Concepts/
 │   ├── double_free.cpp
 │   └── heap_fragmentation.cpp
 │
-├── Data Structures/
+├── Data_Structures/
 │   ├── data_structure_introduction.cpp
 │   ├── arrays_vs_linked_lists.cpp
 │   ├── singly_linkedLists_operations.cpp
