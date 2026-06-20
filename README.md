@@ -22,54 +22,59 @@ More topics will be added progressively.
 ```text
 CPP_Core_Concepts/
 │
-├── Pointers/
-│   ├── pointer_basics.cpp
-│   ├── pointer_arithmetic.cpp
-│   ├── pointer_to_pointer.cpp
-│   ├── call_by_reference.cpp
-│   ├── function_pointers_as_callbacks.cpp
-│   └── function_pointers.cpp
+├── 1_C_Fundamentals/
+│     ├── Pointers
+│     ├── Arrays and Strings
+│     └── Memory Management
 │ 
-├── Arrays_and_Strings/
-│   ├── array_basics.cpp
-│   ├── array_as_function_arguments.cpp
-│   ├── character_arrays.cpp
-│   ├── multidimensional_arrays.cpp
-│   ├── string_functions.cpp
-│   ├── string_and_pointers.cpp
-│   └── Übung/
-│            ├── command_line.cpp
-│            └── user_loginSystem.cpp
+├── 2_CPP_Fundamentals/
+│     ├── Classes
+│     ├── Constructors / Destructors
+│     ├── References
+│     ├── Const Correctness
+│     └── Namespaces
 │
-├── Dynamic_Memory_Management/
-│   ├── stack_vs_heap.cpp        
-│   ├── malloc_basics.cpp        
-│   ├── calloc_vs_malloc.cpp     
-│   ├── realloc_example.cpp      
-│   ├── memory_leak.cpp          
-│   ├── dangling_pointer.cpp
-│   ├── double_free.cpp
-│   └── heap_fragmentation.cpp
+├── 3_Data_Structures/
+│     ├── Introduction
+│     ├── C Implementations
+│         ├── Linked Lists
+│         ├── Stack
+│         ├── Queue
+│         ├── Circular Buffer
+│ 
+│     ├── C++ Implementations
+│         ├── Stack Class
+│         ├── Queue Class
+│         ├── Circular Buffer Class
+│         └── Stack Class using Templates 
+│     │
+│     └── Exercises
 │
-├── Data_Structures/
-│   ├── data_structure_introduction.cpp
-│   ├── arrays_vs_linked_lists.cpp
-│   ├── singly_linkedLists_operations.cpp
-│   ├── doubly_linkedLists_operations.cpp
-│   ├── stack_using_array.cpp
-│   ├── stack_using_linked_list.cpp
-│   ├── queue_using_array.cpp
-│   ├── queue_using_linked_list.cpp
-│   └── circular_buffer.cpp
-│   └── cpp_Implementations/
-│                           └──Stack
-│   └── Übung/
-│            └── event_queue_handling.cpp
-│
-├── Algorithms/
-├── Bitwise_Operations/
-├── Low_Level_Data_Manipulation/
-│
+├── 4_Algorithms/
+│   ├── Searching
+│       ├── Linear Search
+│       └── Binary Search
+│ 
+│   ├── Sorting
+│       ├── Bubble Sort
+│       ├── Selection Sort
+│       ├── Insertion Sort
+│       ├── Merge Sort
+│       └── Quick Sort
+│ 
+│   ├── Recursion
+│       ├── Factorial
+│       ├── Fibonacci
+│       └── Recursive Traversal
+│ 
+│   └── Embedded Algorithms
+│       ├── Debounce Algorithm
+│       ├── Edge Detection
+│       ├── Hysteresis Filter
+│       └── Moving Average Filter
+│ 
+├── 5_Low_Level_Programming/
+├── 6_Build_System
 │
 └── README.md
 
