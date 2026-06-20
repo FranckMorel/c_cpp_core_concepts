@@ -14,7 +14,7 @@ private:
 
 public:
     Stack();
-    ~Stack();
+   ~Stack();
 
     void push(int value);
     bool pop(int &value);
