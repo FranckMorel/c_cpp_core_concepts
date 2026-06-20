@@ -1,17 +1,8 @@
 # C_CPP Core Concepts
 
-The goal of this repository is to build a strong understanding of memory behavior, data representation and low-level software concepts commonly used in embedded systems and firmware development.
+The goal of this repository is to develop a strong foundation in C/C++ and low-level programming concepts relevant to embedded systems and firmware development.
 
-This repository covers the following main topics:
-
-- Pointers
-- Arrays and Strings
-- Dynamic Memory Management
-- Data structures for embedded systems
-- Algorithms
-- File handling
-- Bitwise Operations
-- Low-Level Data Manipulation
+The repository focuses on understanding memory behavior, data structures, algorithms and efficient software design through practical implementations and examples.
 
 More topics will be added progressively.
 
