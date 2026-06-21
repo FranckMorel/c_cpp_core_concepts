@@ -24,3 +24,9 @@ public:
 };
 
 #endif
+
+
+/*
+g++ -o stack.exe main.cpp stack.cpp
+stack.exe
+*/
