@@ -18,14 +18,7 @@ CPP_Core_Concepts/
 │     ├── Arrays and Strings
 │     └── Memory Management
 │ 
-├── 2_CPP_Fundamentals/
-│     ├── Classes
-│     ├── Constructors / Destructors
-│     ├── References
-│     ├── Const Correctness
-│     └── Namespaces
-│
-├── 3_Data_Structures/
+├── 2_Data_Structures/
 │     ├── Introduction
 │     │
 │     ├── C Implementations
@@ -42,7 +35,7 @@ CPP_Core_Concepts/
 │     │
 │     └── Exercises
 │
-├── 4_Algorithms/
+├── 3_Algorithms/
 │     ├── Searching
 │     │   ├── Linear Search
 │     │   └── Binary Search
@@ -65,8 +58,8 @@ CPP_Core_Concepts/
 │         ├── Hysteresis Filter
 │         └── Moving Average Filter
 │ 
-├── 5_Low_Level_Programming/
-├── 6_Build_System
+├── 4_Low_Level_Programming/
+├── 5_Build_System
 │
 └── README.md
 
