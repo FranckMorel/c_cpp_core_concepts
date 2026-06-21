@@ -1,3 +1,9 @@
+/*
+Topic : CPP implementation of stack using linked List
+
+See C implementation/stack for detail explanations for each function
+*/
+
 #include "stack.hpp"
 #include <iostream>
 
