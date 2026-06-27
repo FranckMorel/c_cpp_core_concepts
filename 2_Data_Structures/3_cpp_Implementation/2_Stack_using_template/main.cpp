@@ -20,7 +20,7 @@ struct SensorData
     unsigned long timestamp;
 };
 
-/*
+/***********************************************************************************************************
 
 * Reverse a string using a stack.
 *
@@ -50,7 +50,7 @@ void ReverseString(char* c, size_t len)
 
 }
 
-/*
+/*******************************************************************************************************
  * Reverse a string using recursion.
  *
  * Unlike the previous implementation,
@@ -130,6 +130,45 @@ void ReverseStringRecursive(char *str)
     ReverseRecursive(left, right);
 }
 
+/*********************************************************************************************************
+ * Check balanced parentheses using a stack.
+ *
+ * Opening brackets are pushed onto the stack.
+ * Closing brackets must match the latest
+ * opening bracket on top of the stack.
+ *
+ * This demonstrates a typical real-world
+ * application of the LIFO principle.
+ */
+bool checkBalancedParenthesis(char *str) {
+    Stack<char> charStack;
+    size_t len = strlen(str);
+    char topChar;
+
+    for (size_t i = 0; i < len; i++)
+    {
+        if (str[i] == '(' || str[i] == '{' || str[i] == '[')
+        {
+            charStack.push(str[i]);
+        }
+        else if(str[i] == ')' || str[i] == '}' || str[i] == ']')
+        {
+            if(!charStack.pop(topChar))
+            {
+                return false;
+            }
+            if((str[i] == ')' && topChar != '(') ||
+               (str[i] == '}' && topChar != '{') ||
+               (str[i] == ']' && topChar != '['))
+            {
+                return false;
+            }
+        }
+    }
+
+    return charStack.isEmpty();
+}
+
 
 int main()
 {
@@ -193,9 +232,27 @@ int main()
     ReverseStringRecursive(input);
 
     cout << "Reversed String: " << input << "\n";
+    cout << "\n\n";
+
+/*************************************************
+ * Example 4:
+ * Check balanced parentheses using a stack
+*************************************************/
+
+    char str1[] = "{[(())]}";
+    char str2[] = "{[(])}";
+    char str3[] = "((()))";
+    char str4[] = "(()";
+    char str5[] = "";
+
+    std::cout << str1 << " : " << checkBalancedParenthesis(str1) << "\n";
+    std::cout << str2 << " : " << checkBalancedParenthesis(str2) << "\n";
+    std::cout << str3 << " : " << checkBalancedParenthesis(str3) << "\n";
+    std::cout << str4 << " : " << checkBalancedParenthesis(str4) << "\n";
+    std::cout << "\"" << str5 << "\"" << " : " << checkBalancedParenthesis(str5) << "\n";
+
 
     return 0;
-
 }
 
 
