@@ -170,6 +170,103 @@ bool checkBalancedParenthesis(char *str) {
 }
 
 
+/*******************************************************************************************************
+ * Evaluate a postfix expression using a stack.
+ *
+ * Algorithm:
+ * 1. Push every operand onto the stack.
+ * 2. When an operator is encountered:
+ *      - Pop the right operand.
+ *      - Pop the left operand.
+ *      - Perform the operation.
+ *      - Push the result back onto the stack.
+ * 3. The final value remaining on the stack
+ *    is the result of the expression.
+ */
+int EvaluatePostfix(char *exp)
+{
+    Stack<int> intStack;
+
+    size_t len = strlen(exp);
+
+    int operandLeft;
+    int operandRight;
+    int result;
+
+    for (size_t i = 0; i < len; i++)
+    {
+        /*
+         * Operand
+         *
+         * Convert the ASCII digit into
+         * an integer before pushing it
+         * onto the stack.
+         */
+        if (exp[i] >= '0' && exp[i] <= '9')
+        {
+            intStack.push(exp[i] - '0');
+        }
+
+        /*
+         * Operator
+         *
+         * The top element represents
+         * the right operand.
+         */
+        else if (exp[i] == '+' || exp[i] == '-' || exp[i] == '*' || exp[i] == '/')
+        {
+            /*
+             * A valid operation requires
+             * two operands.
+             */
+            if (intStack.pop(operandRight) && intStack.pop(operandLeft))
+            {
+                switch (exp[i])
+                {
+                case '+':
+                    result = operandLeft + operandRight;
+                    break;
+
+                case '-':
+                    result = operandLeft - operandRight;
+                    break;
+
+                case '*':
+                    result = operandLeft * operandRight;
+                    break;
+
+                case '/':
+                    if (operandRight == 0)
+                    {
+                        return 0;
+                    }
+
+                    result = operandLeft / operandRight;
+                    break;
+                }
+
+                /*
+                 * Store the intermediate
+                 * result back on the stack.
+                 */
+                intStack.push(result);
+            }
+        }
+    }
+
+    /*
+     * The remaining stack element
+     * contains the final result.
+     */
+    if (intStack.pop(result))
+    {
+        return result;
+    }
+
+    return 0;
+}
+
+
 int main()
 {
 
@@ -245,12 +342,27 @@ int main()
     char str4[] = "(()";
     char str5[] = "";
 
-    std::cout << str1 << " : " << checkBalancedParenthesis(str1) << "\n";
-    std::cout << str2 << " : " << checkBalancedParenthesis(str2) << "\n";
-    std::cout << str3 << " : " << checkBalancedParenthesis(str3) << "\n";
-    std::cout << str4 << " : " << checkBalancedParenthesis(str4) << "\n";
-    std::cout << "\"" << str5 << "\"" << " : " << checkBalancedParenthesis(str5) << "\n";
+    cout << str1 << " : " << checkBalancedParenthesis(str1) << "\n";
+    cout << str2 << " : " << checkBalancedParenthesis(str2) << "\n";
+    cout << str3 << " : " << checkBalancedParenthesis(str3) << "\n";
+    cout << str4 << " : " << checkBalancedParenthesis(str4) << "\n";
+    cout << "\"" << str5 << "\"" << " : " << checkBalancedParenthesis(str5) << "\n";
+    cout << "\n\n";
 
+/************************************************
+ * Example 5:
+ * Evaluate postfix expressions
+***********************************************/
+
+    char exp1[] = "23+5*"; // (2 + 3) * 5 = 25
+    char exp2[] = "82-";   // 8 - 2 = 6
+    char exp3[] = "84/";   // 8 / 4 = 2
+    char exp4[] = "234*+"; // 2 + (3 * 4) = 14
+
+    cout << exp1 << " = " << EvaluatePostfix(exp1) << "\n";
+    cout << exp2 << " = " << EvaluatePostfix(exp2) << "\n";
+    cout << exp3 << " = " << EvaluatePostfix(exp3) << "\n";
+    cout << exp4 << " = " << EvaluatePostfix(exp4) << "\n";
 
     return 0;
 }
