@@ -29,9 +29,9 @@ CPP_Core_Concepts/
 │     │
 │     ├── 3_CPP_Implementation/
 │     │   ├── 1_Stack_Class/
-│     │   ├── 2_Queue_Class/
-│     │   ├── 3_Circular_Buffer_Class/
-│     │   └── 4_Stack_Class_Using_Templates/
+│     │   ├── 2_Stack_Applications
+│     │   ├── 3_Queue_Class/
+│     │   └── 4_Circular_Buffer_Class/
 │     │
 │     └── 4_Exercises/
 │
