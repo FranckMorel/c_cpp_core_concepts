@@ -1,3 +1,18 @@
+/*
+ * Topic: Stack Applications
+ *
+ * Practical examples demonstrating how a stack
+ * can be used to solve common programming problems.
+ *
+ * Applications:
+ *
+ * 1. Store custom data types
+ * 2. Reverse a string
+ * 3. Reverse a string using recursion
+ * 4. Check balanced parentheses
+ * 5. Evaluate postfix expressions
+ */
+
 #include "stack_template.hpp"
 #include <cstring>
 #include <iostream>
@@ -28,8 +43,8 @@ struct SensorData
 * 1. Push all characters onto the stack.
 * 2. Pop them back into the string.
 * 3. Due to the LIFO principle, the string
-* is reconstructed in reverse order.
-  */
+*    is reconstructed in reverse order.
+*/
 void ReverseString(char* c, size_t len)
 {
     Stack<char> charStack;
@@ -221,8 +236,7 @@ int EvaluatePostfix(char *exp)
              */
             if (intStack.pop(operandRight) && intStack.pop(operandLeft))
             {
-                switch (exp[i])
-                {
+                switch(exp[i]){
                 case '+':
                     result = operandLeft + operandRight;
                     break;
@@ -251,6 +265,7 @@ int EvaluatePostfix(char *exp)
                  */
                 intStack.push(result);
             }
+
         }
     }
 
@@ -258,6 +273,64 @@ int EvaluatePostfix(char *exp)
      * The remaining stack element
      * contains the final result.
      */
+    if (intStack.pop(result))
+    {
+        return result;
+    }
+
+    return 0;
+}
+
+
+int EvaluatePrefix(char* exp)
+{
+    Stack<int> intStack;
+
+    size_t len = strlen(exp);
+
+    int operandLeft;
+    int operandRight;
+    int result;
+
+    for (int i = static_cast<int>(len - 1); i >= 0; i--)
+    {
+        if(exp[i] >= '0' && exp[i] <= '9')
+        {
+            intStack.push(exp[i] - '0');
+        }
+        else if (exp[i] == '+' || exp[i] == '-' || exp[i] == '*' || exp[i] == '/')
+        {
+            if (intStack.pop(operandLeft) && intStack.pop(operandRight))
+            {
+                switch (exp[i])
+                {
+                case '+':
+                    result = operandLeft + operandRight;
+                    break;
+
+                case '-':
+                    result = operandLeft - operandRight;
+                    break;
+
+                case '*':
+                    result = operandLeft * operandRight;
+                    break;
+
+                case '/':
+                    if (operandRight == 0)
+                    {
+                        return 0;
+                    }
+
+                    result = operandLeft / operandRight;
+                    break;
+                }
+
+                intStack.push(result);
+            }
+        }
+    }
+
     if (intStack.pop(result))
     {
         return result;

@@ -1,5 +1,5 @@
 /*
- * Topic: Template Stack
+ * Topic: Generic Stack
  *
  * Generic stack implementation using a singly linked list.
  *
