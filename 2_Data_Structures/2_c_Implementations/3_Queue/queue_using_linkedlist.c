@@ -192,9 +192,7 @@ void printArray(const int array[], int size)
 void clearQueue(void)
 {
     int value;
-
-    while (Dequeue(&value))
-        ;
+    while (Dequeue(&value));
 }
 
 
