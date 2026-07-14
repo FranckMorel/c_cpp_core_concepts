@@ -1,5 +1,5 @@
 /*
- * Topic: Stack using Linked List
+ * Topic: Stack using Singly Linked List
  *
  * This example demonstrates:
  * - push operation

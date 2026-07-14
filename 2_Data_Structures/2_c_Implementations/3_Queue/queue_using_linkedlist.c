@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 /*
- * Queue Implementation using a Singly Linked List
+ * Topic: Queue using Singly Linked List
  *
  * FIFO Principle:
  * First In, First Out
@@ -11,6 +8,9 @@
  * grows dynamically and does not require a
  * predefined maximum size.
  */
+
+#include <stdio.h>
+#include <stdlib.h>
 
 struct Node
 {
