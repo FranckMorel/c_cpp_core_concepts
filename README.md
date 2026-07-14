@@ -13,11 +13,11 @@ More topics will be added progressively.
 ```text
 CPP_Core_Concepts/
 │
-├── 1_C_Fundamentals/
+├── 1_C_Basics/
 │     ├── 1_Pointers/
 │     ├── 2_Arrays_and_Strings/
 │     ├── 3_Structures/
-│     └── 4_Memory_Management/
+│     └── 4_Dynamic_Memory_Management/
 │
 ├── 2_Data_Structures/
 │     ├── 1_Introduction/
